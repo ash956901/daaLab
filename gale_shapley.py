@@ -27,3 +27,19 @@ def stable_match(men_pref,women_pref):
                 free_men.append(man)
     
     return man_partner
+    
+if __name__ == "__main__":
+    
+    female_pref=[[2,0,1],
+               [0,1,2],
+               [1,2,0]]
+    
+    male_pref=[[0,1,2],
+               [1,2,0],
+               [1,0,2]]
+    
+
+    matches=stable_match(male_pref,female_pref)
+
+    for man,woman in enumerate(matches):
+        print(f"Man {man+1} is matched to woman {woman+1} ")
