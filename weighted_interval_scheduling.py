@@ -1,3 +1,4 @@
+#Comments were added to make it easy to understand
 def latest_non_conflict(intervals, i):
     for j in range(i - 1, -1, -1):
         if intervals[j][1] <= intervals[i][0]:
@@ -28,7 +29,7 @@ def weighted_interval_scheduling(intervals):
 
     return dp[-1]
 
-# Example usage:
+
 # Each interval is represented as a tuple (start_time, end_time, weight)
 intervals = [
     (1, 3, 5),
