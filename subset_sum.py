@@ -20,4 +20,4 @@ def subset_sum(nums, target):
 
 nums = [2, 4, 6, 8]
 target = 10
-print(subset_sum(nums, target))  # Output: True
+print(subset_sum(nums, target))  
