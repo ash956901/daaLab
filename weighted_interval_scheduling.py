@@ -18,11 +18,11 @@ def weighted_interval_scheduling(intervals):
                 break
         
         # Calculate maximum weight by either including or excluding the current interval
-        include_current = intervals[index][2] + (recurse(latest_non_overlap) if latest_non_overlap != -1 else 0)
-        exclude_current = recurse(index - 1)
+        include = intervals[index][2] + (recurse(latest_non_overlap) if latest_non_overlap != -1 else 0)
+        exclude = recurse(index - 1)
         
         # Memoize the result
-        memo[index] = max(include_current, exclude_current)
+        memo[index] = max(include, exclude)
         
         return memo[index]
     
